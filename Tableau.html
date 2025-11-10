@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Tableaux fusionnés</title>
+  <style>
+    /* === Thème général === */
+    body {
+      background-color: #000; /* fond noir */
+      color: #fff;
+      font-family: 'Poppins', sans-serif;
+      text-align: center;
+      margin: 0;
+      padding: 40px 0;
+    }
+
+    h1 {
+      color: #ff66b2; /* rose */
+      margin-bottom: 30px;
+      text-shadow: 0 0 10px #ff66b2;
+      font-size: 2rem;
+    }
+
+    /* === Style des tableaux === */
+    table {
+      border-collapse: collapse;
+      margin: 30px auto;
+      width: 50%;
+      border: 2px solid #fff;
+      border-radius: 15px;
+      overflow: hidden;
+      background: linear-gradient(145deg, #111, #1a1a1a);
+      box-shadow: 0 0 25px rgba(255, 102, 178, 0.3);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    table:hover {
+      transform: scale(1.03);
+      box-shadow: 0 0 35px rgba(255, 102, 178, 0.6);
+    }
+
+    caption {
+      font-weight: bold;
+      color: #ff66b2;
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    td {
+      border: 1px solid #fff;
+      padding: 15px;
+      text-align: center;
+      font-size: 1.1rem;
+      color: #fff;
+      transition: background-color 0.3s ease;
+    }
+
+    td:hover {
+      background-color: rgba(255, 102, 178, 0.1);
+    }
+
+    /* === Couleurs sur fond === */
+    .rouge {
+      background-color: #ff4d4d;
+      color: #000;
+      border-radius: 8px;
+      font-weight: bold;
+    }
+
+    .vert {
+      background-color: #33cc33;
+      color: #000;
+      border-radius: 8px;
+      font-weight: bold;
+    }
+
+    /* === Texte en rotation === */
+    .rotate {
+      display: inline-block;
+      transform: rotate(45deg);
+    }
+
+    /* === Texte vertical === */
+    .positionRGL3 {
+      writing-mode: vertical-rl;
+      text-orientation: upright;
+      background-color: #ff66b2;
+      color: #000;
+      font-weight: bold;
+      border-radius: 8px;
+    }
+
+    /* === Animation subtile === */
+    td, caption {
+      animation: fadeIn 0.8s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+  </style>
+</head>
+<body>
+
+  <h1>🌸 Tableaux Fusionnés - Thème Rose & Noir 🌸</h1>
+
+  <!-- Tableau 1 -->
+  <table>
+    <caption>Tableau 1</caption>
+    <tbody>
+      <tr>
+        <td colspan="2">RGL1</td>
+      </tr>
+      <tr>
+        <td class="rouge">RGL2</td>
+        <td class="vert rotate">RGL3</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- Tableau 2 -->
+  <table>
+    <caption>Tableau 2</caption>
+    <tr>
+      <td class="positionRGL3" rowspan="2">RMS1</td>
+      <td>RMS2</td>
+    </tr>
+    <tr>
+      <td class="vert rotate">RMS3</td>
+    </tr>
+  </table>
+
+  <!-- Tableau 3 -->
+  <table>
+    <caption>Tableau 3</caption>
+    <tr>
+      <td colspan="3">A</td>
+    </tr>
+    <tr>
+      <td rowspan="2">B</td>
+      <td colspan="2" class="rouge">C</td>
+    </tr>
+    <tr>
+      <td class="vert">D</td>
+      <td class="rouge">E</td>
+    </tr>
+  </table>
+
+</body>
+</html>
+
+      

@@ -1,0 +1,97 @@
+/* === STYLE GÉNÉRAL === */
+body {
+    font-family: "Poppins", Arial, sans-serif;
+    background-color: #000; /* fond noir */
+    color: #fff; /* texte blanc */
+    margin: 0;
+    padding: 0;
+}
+
+/* === EN-TÊTE === */
+table {
+    background-color: #111;
+    width: 100%;
+    border-collapse: collapse;
+    padding: 10px 0;
+}
+
+h1 {
+    color: #ff66b2;
+    margin: 5px 0;
+    text-transform: uppercase;
+    font-size: 28px;
+    letter-spacing: 2px;
+}
+
+td img {
+    border-radius: 10px;
+}
+
+td p {
+    color: #fff;
+    font-size: 18px;
+    margin: 0;
+}
+
+/* === NAVIGATION === */
+nav {
+    text-align: center;
+    margin: 20px 0;
+}
+
+nav a {
+    color: #ff66b2;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+/* === CONTENU PRINCIPAL === */
+div h2 {
+    color: #ff66b2;
+    text-transform: uppercase;
+    border-left: 5px solid #ff66b2;
+    padding-left: 10px;
+    margin-left: 10px;
+}
+
+div h3 {
+    color: #ff66b2;
+    margin-top: 20px;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+ul li {
+    margin: 10px 0;
+    font-size: 17px;
+}
+
+ul li strong {
+    color: #ff66b2;
+}
+
+/* === LIGNES DE SÉPARATION === */
+hr {
+    border: 1px solid #ff66b2;
+    margin: 25px 0;
+}
+
+/* === PIED DE PAGE === */
+footer {
+    background-color: #111;
+    padding: 15px;
+    text-align: center;
+    font-size: 15px;
+    color: #fff;
+    border-top: 2px solid #ff66b2;
+}

@@ -1,0 +1,38 @@
+/* Fond noir pour tout le corps de la page */
+body {
+    background-color: #000; /* noir */
+    color: #fff; /* texte blanc */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 15px;
+}
+
+/* Titres en rose */
+h1, h2, h3 {
+    color: #ff66b2; /* rose vif */
+}
+
+/* Liens en rose et changement au survol */
+a {
+    color: #ff66b2;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Les cadres ou lignes horizontales en rose */
+hr {
+    border: 1px solid #ff66b2;
+}
+
+/* Pour les listes */
+ul, ol {
+    color: #fff;
+}
+
+/* Petits textes comme <small> */
+small {
+    color: #ff66b2;
+}

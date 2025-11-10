@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Accueil - Kaneza Rdj</title>
+  <style>
+    /* === STYLE GLOBAL === */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #000000, #1a001a, #330033);
+      color: #fff;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+    }
+
+    h1 {
+      font-size: 3em;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      background: linear-gradient(90deg, #ff66b2, #ff99cc, #ff66b2);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: glow 3s ease-in-out infinite;
+    }
+
+    @keyframes glow {
+      0% { text-shadow: 0 0 10px #ff99cc; }
+      50% { text-shadow: 0 0 25px #ff66b2, 0 0 40px #ff99cc; }
+      100% { text-shadow: 0 0 10px #ff99cc; }
+    }
+
+    p {
+      text-align: center;
+      font-size: 1.2em;
+      max-width: 700px;
+      margin-top: 15px;
+      line-height: 1.6;
+      color: #f5f5f5;
+    }
+
+    .btn {
+      margin-top: 40px;
+      background: #ff66b2;
+      color: #000;
+      padding: 15px 35px;
+      border: none;
+      border-radius: 30px;
+      font-size: 1.1em;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      cursor: pointer;
+      box-shadow: 0 0 20px rgba(255, 102, 178, 0.5);
+      transition: all 0.3s ease;
+    }
+
+    .btn:hover {
+      background: #fff;
+      color: #ff66b2;
+      box-shadow: 0 0 30px rgba(255, 102, 178, 0.8);
+      transform: scale(1.05);
+    }
+
+    footer {
+      position: absolute;
+      bottom: 15px;
+      font-size: 0.9em;
+      color: #bbb;
+      text-align: center;
+    }
+
+    footer span {
+      color: #ff66b2;
+    }
+
+    /* Animation du texte d’intro */
+    .intro {
+      opacity: 0;
+      transform: translateY(30px);
+      animation: slideUp 2s ease forwards;
+    }
+
+    @keyframes slideUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Petits cercles lumineux animés en fond */
+    .circle {
+      position: absolute;
+      border-radius: 50%;
+      background: rgba(255, 102, 178, 0.1);
+      animation: float 10s infinite;
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0) scale(1); }
+      50% { transform: translateY(-40px) scale(1.2); }
+      100% { transform: translateY(0) scale(1); }
+    }
+
+    .circle:nth-child(1) { width: 150px; height: 150px; top: 10%; left: 15%; animation-delay: 0s; }
+    .circle:nth-child(2) { width: 200px; height: 200px; top: 70%; left: 70%; animation-delay: 2s; }
+    .circle:nth-child(3) { width: 100px; height: 100px; top: 50%; left: 80%; animation-delay: 4s; }
+    .circle:nth-child(4) { width: 120px; height: 120px; top: 80%; left: 20%; animation-delay: 1s; }
+  </style>
+</head>
+<body>
+
+  <!-- Cercles de fond -->
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+  <div class="circle"></div>
+
+  <!-- Contenu principal -->
+  <div class="intro">
+    <h1>Bienvenue sur mon site 🌸</h1>
+    <p>Salut tout le monde ! Je suis <strong>Kaneza Rdj</strong>, étudiante en <strong>RMS2 à Pigier Bénin</strong>.<br>
+       Passionnée par la technologie, l'informatique et les créations web, je vous souhaite une visite inspirante sur mon site ✨</p>
+    <button class="btn" onclick="alert('Merci de ta visite 💖')">Entrer</button>
+  </div>
+
+  <footer>
+    © <span>Kaneza Rdj</span> — Tous droits réservés | 2025
+  </footer>
+</body>
+</html>

@@ -1,0 +1,59 @@
+/* === STYLE GLOBAL === */
+body {
+    font-family: "Poppins", Arial, sans-serif;
+    background-color: #000; /* noir professionnel */
+    color: #fff;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+}
+
+/* === CONTAINER DU MENU === */
+.menu-container {
+    background-color: #111; /* fond sombre */
+    padding: 30px 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+    width: 250px;
+}
+
+/* === TITRE DU MENU === */
+.menu-container h3 {
+    color: #ff66b2; /* rose vif */
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 22px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* === LIENS DU MENU === */
+.menu-link {
+    display: block;
+    background-color: #fff; /* blanc pour le cadre */
+    color: #111; /* texte noir */
+    text-decoration: none;
+    padding: 12px 15px;
+    margin-bottom: 12px;
+    border-radius: 8px;
+    border: 2px solid #ff66b2; /* bordure rose */
+    font-weight: 600;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+/* Effet au survol */
+.menu-link:hover {
+    background-color: #ff66b2;
+    color: #fff;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(255,102,178,0.5);
+}
+
+/* Dernier lien sans marge inférieure */
+.menu-link:last-child {
+    margin-bottom: 0;
+}

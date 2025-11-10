@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>CV — Kaneza</title>
+  <style>
+    :root{
+      --pink-600: #e11d48; /* accent */
+      --pink-400: #fb7185;
+      --black: #0b0b0d;
+      --muted: #6b7280;
+      --bg:#f8f6f8;
+      --card:#ffffff;
+      --gap:20px;
+      --maxw:980px;
+      --radius:14px;
+
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+
+    /* Reset */
+    *{box-sizing:border-box}
+    body{margin:0;background:linear-gradient(180deg,var(--bg),#fff);color:var(--black);display:flex;justify-content:center;padding:36px 18px}
+
+    /* CV container */
+    .cv{width:100%;max-width:var(--maxw);background:var(--card);border-radius:var(--radius);overflow:hidden;box-shadow:0 10px 30px rgba(11,11,13,0.08);display:grid;grid-template-columns:330px 1fr;gap:var(--gap);}
+
+    /* Header full width */
+    .header{grid-column:1 / -1;padding:26px 30px;background:linear-gradient(90deg,var(--pink-600), #7f1d1d);color:white;display:flex;align-items:center;justify-content:space-between;gap:12px}
+    .header .name{display:flex;flex-direction:column}
+    .header h1{margin:0;font-size:1.6rem;letter-spacing:0.3px}
+    .header p{margin:6px 0 0;font-size:0.95rem;opacity:0.95}
+
+    /* Left column */
+    .left{padding:26px;background:linear-gradient(180deg,rgba(225,29,72,0.03),transparent);border-right:1px solid rgba(15,15,15,0.04)}
+
+    .photo{display:flex;justify-content:center;margin-bottom:18px}
+    .avatar{width:140px;height:140px;border-radius:50%;background:linear-gradient(135deg,var(--pink-400),#fff);display:flex;align-items:center;justify-content:center;font-weight:800;color:white;font-size:2rem;box-shadow:0 8px 30px rgba(225,29,72,0.18);border:6px solid rgba(255,255,255,0.85)}
+
+    .section{margin-bottom:18px}
+    .section h3{margin:0 0 10px 0;font-size:0.95rem;color:var(--black);display:flex;align-items:center;gap:10px}
+    .small{font-size:0.95rem;color:var(--muted);margin:6px 0}
+
+    .contact-line{display:flex;align-items:center;gap:8px;color:var(--muted);font-size:0.95rem;margin:6px 0}
+    .contact-line strong{color:var(--black);font-weight:700;width:86px}
+
+    .skills{display:flex;flex-direction:column;gap:10px}
+    .skill-item{font-size:0.92rem}
+    .skill-bar{height:10px;background:linear-gradient(90deg,#fdecef,#fee2e7);border-radius:999px;overflow:hidden;margin-top:6px}
+    .skill-bar > i{display:block;height:100%;background:linear-gradient(90deg,var(--pink-600),var(--pink-400));}
+
+    .lang-list,.interest-list{padding-left:16px;margin:6px 0 0}
+    .interest-list li{margin:6px 0;color:var(--muted)}
+
+    /* Right column */
+    .right{padding:26px}
+    .meta{color:var(--muted);font-size:0.95rem}
+
+    .title-row{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;margin-bottom:8px}
+    .right h2{margin:0;font-size:1.12rem;color:var(--black)}
+
+    .block{margin-bottom:16px}
+    .block h3{margin:0 0 8px 0;color:var(--pink-600);font-size:0.98rem}
+    .block p{margin:6px 0;color:var(--black)}
+
+    .list{margin:8px 0 0;padding-left:18px}
+    .list li{margin:8px 0}
+
+    /* Fancy timeline for experiences */
+    .timeline{position:relative;padding-left:18px}
+    .timeline::before{content:'';position:absolute;left:6px;top:0;bottom:0;width:2px;background:linear-gradient(var(--pink-400),var(--pink-600));border-radius:2px;opacity:0.25}
+    .timeline li{position:relative;padding:10px 12px 10px 18px;background:linear-gradient(180deg,rgba(243,244,246,0.6),transparent);border-radius:8px;margin-bottom:12px}
+    .timeline li::before{content:'';position:absolute;left:-10px;top:16px;width:12px;height:12px;background:var(--card);border:4px solid var(--pink-600);border-radius:50%}
+
+    /* Buttons */
+    .actions{display:flex;gap:10px}
+    .btn{padding:8px 12px;border-radius:8px;border:0;cursor:pointer;font-weight:700}
+    .btn--outline{background:transparent;border:2px solid rgba(11,11,13,0.07)}
+    .btn--accent{background:var(--pink-600);color:white}
+
+    /* Print friendly tweaks */
+    @media print{
+      body{padding:0;background:white}
+      .cv{box-shadow:none;border-radius:0}
+      .header{color:black;background:#fff}
+      .avatar{border-color:#fff}
+    }
+
+    /* Responsive */
+    @media (max-width:900px){
+      .cv{grid-template-columns:1fr;}
+      .left{border-right:none;border-bottom:1px solid rgba(15,15,15,0.04)}
+      .header{flex-direction:column;align-items:flex-start;gap:10px}
+      .avatar{width:110px;height:110px}
+    }
+
+  </style>
+</head>
+<body>
+  <article class="cv" role="document" aria-label="Curriculum Vitae de Kanezy">
+
+    <header class="header">
+      <div class="name">
+        <h1>Kaneza RADJI A.</h1>
+        <p>Étudiante en 2ᵉ année RMS2 — Pigier Bénin · Développement web & cybersécurité</p>
+      </div>
+      <div style="text-align:right">
+        <div style="font-weight:700">Disponible • Immédiatement</div>
+        <div class="actions" style="margin-top:8px">
+          <button class="btn btn--outline" onclick="window.print()">Imprimer</button>
+          <a class="btn btn--accent" href="#contact" style="text-decoration:none;color:inherit">Me contacter</a>
+        </div>
+      </div>
+    </header>
+
+    <aside class="left" aria-label="Informations personnelles et compétences">
+      <div class="photo">
+        <div class="avatar">KZ</div>
+      </div>
+
+      <section class="section" id="contact">
+        <h3>Contact</h3>
+        <div class="contact-line"><strong>Téléphone :</strong><span>+229 44254704</span></div>
+        <div class="contact-line"><strong>Email :</strong><span>kanezardj@gmail.com</span></div>
+        <div class="contact-line"><strong>Adresse :</strong><span>Cotonou, Bénin</span></div>
+      </section>
+
+      <section class="section">
+        <h3>Compétences</h3>
+        <div class="skills">
+          <div class="skill-item">
+            <div style="display:flex;justify-content:space-between;align-items:center"><span>HTML & CSS</span><span class="small" style="color:var(--muted)">Bon</span></div>
+            <div class="skill-bar" aria-hidden="true"><i style="width:88%"></i></div>
+          </div>
+
+          <div class="skill-item">
+            <div style="display:flex;justify-content:space-between;align-items:center"><span>JavaScript</span><span class="small" style="color:var(--muted)">Notions</span></div>
+            <div class="skill-bar" aria-hidden="true"><i style="width:38%"></i></div>
+          </div>
+
+          <div class="skill-item">
+            <div style="display:flex;justify-content:space-between;align-items:center"><span>Bureautique</span><span class="small" style="color:var(--muted)">Bon</span></div>
+            <div class="skill-bar" aria-hidden="true"><i style="width:82%"></i></div>
+          </div>
+
+          <div class="skill-item">
+            <div style="display:flex;justify-content:space-between;align-items:center"><span>Sécurité (bases)</span><span class="small" style="color:var(--muted)">Notions</span></div>
+            <div class="skill-bar" aria-hidden="true"><i style="width:48%"></i></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <h3>Langues</h3>
+        <div class="small">Français — Courant</div>
+        <div class="small">Anglais — Intermédiaire</div>
+      </section>
+
+      <section class="section">
+        <h3>Centres d'intérêt</h3>
+        <ul class="interest-list">
+          <li>Musique & danse</li>
+          <li>Sorties entre amis</li>
+          <li>Projets web et apprentissage</li>
+        </ul>
+      </section>
+
+    </aside>
+
+    <main class="right" aria-label="Expérience et formation">
+
+      <div class="title-row">
+        <div>
+          <h2>Profil</h2>
+          <p class="meta">Étudiante en RMS2, je cherche à renforcer mes compétences en développement web et obtenir une première expérience pratique en cybersécurité.</p>
+        </div>
+        <div class="meta" style="text-align:right">
+          <div style="font-weight:600">Pigier Bénin — 2ᵉ année</div>
+          <div class="small">Pigier • ISM Adonaï</div>
+        </div>
+      </div>
+
+      <section class="block">
+        <h3>Formation</h3>
+        <p><strong>Pigier Bénin</strong> — 2ᵉ année RMS2 (en cours)</p>
+        <p><strong>ISM Adonaï</strong> — 1ʳᵉ année RMS2</p>
+      </section>
+
+      <section class="block">
+        <h3>Formations & projets</h3>
+        <ul class="list">
+          <li>Auto-formation & projets en HTML/CSS — mini-sites réalisés pour la classe.</li>
+          <li>Présentations et outils bureautiques (PowerPoint, Word, Excel).</li>
+          <li>Projets scolaires : pages web, intégration responsive.</li>
+        </ul>
+      </section>
+
+      <section class="block">
+        <h3>Expériences</h3>
+        <ul class="timeline">
+          <li>
+            <strong>Projets scolaires</strong>
+            <div class="small">Création de pages HTML/CSS et mini-sites responsives.</div>
+          </li>
+          <li>
+            <strong>Ateliers informatiques</strong>
+            <div class="small">Formation bureautique et initiation à la sécurité informatique.</div>
+          </li>
+        </ul>
+      </section>
+
+      <section class="block">
+        <h3>Objectif</h3>
+        <p>Rejoindre une équipe ou un stage en développement web / sécurité pour acquérir une expérience réelle, participer à des projets et approfondir mes compétences techniques.</p>
+      </section>
+
+      <section class="block">
+        <h3>Références</h3>
+        <p>Disponibles sur demande.</p>
+      </section>
+
+    </main>
+
+  </article>
+</body>
+</html>
